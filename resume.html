@@ -296,21 +296,33 @@
       }
 
       @page {
-        size: A4;
-        margin: 10mm;
+        size: 8.5in 11in;
+        margin: 1in;
       }
 
       @media print {
         :root {
           --paper: #fff;
+          --ink: #000;
+          --muted: #000;
+          --accent: #000;
+          --line: #000;
         }
 
         body {
           padding: 0;
           background: #fff;
-          font-size: 10.5pt;
+          color: #000;
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 12pt;
+          line-height: 1.15;
           print-color-adjust: exact;
           -webkit-print-color-adjust: exact;
+        }
+
+        a {
+          color: #000;
+          text-decoration: none;
         }
 
         .resume {
@@ -321,30 +333,105 @@
           box-shadow: none;
         }
 
-        .resume-section {
-          margin-top: 12px;
-        }
-
-        .resume-section h2 {
-          margin-bottom: 6px;
-        }
-
-        .skill-groups {
-          gap: 4px;
-        }
-
-        .experience-list {
-          gap: 6px;
-        }
-
         .resume-header {
           grid-template-columns: 1fr 105px;
-          padding-bottom: 12px;
+          gap: 20px;
+          border-bottom: 1.5pt solid #000;
+          padding-bottom: 8pt;
+        }
+
+        h1 {
+          font-size: 20pt;
+          font-weight: 700;
+          letter-spacing: normal;
+          line-height: 1.15;
+          margin-bottom: 3pt;
+        }
+
+        .headline {
+          margin-bottom: 5pt;
+          font-size: 12pt;
+          font-weight: 700;
+        }
+
+        .contact-line {
+          gap: 2pt 12pt;
+          font-size: 12pt;
+        }
+
+        .contact-icon {
+          width: 12px;
+          height: 12px;
         }
 
         .portrait {
-          width: 100px;
-          height: 100px;
+          width: 95px;
+          height: 95px;
+        }
+
+        .resume-section {
+          margin-top: 10pt;
+        }
+
+        .resume-section h2 {
+          margin-bottom: 4pt;
+          font-size: 13pt;
+          font-weight: 700;
+          letter-spacing: 0.05em;
+        }
+
+        .resume-section p {
+          margin-bottom: 4pt;
+        }
+
+        .project-title {
+          font-size: 12pt;
+        }
+
+        .skill-groups {
+          gap: 2pt;
+          margin-left: 14pt;
+          padding-left: 14pt;
+        }
+
+        .experience-list {
+          gap: 5pt;
+          padding-left: 16pt;
+        }
+
+        .experience-list p {
+          margin-top: 2pt;
+        }
+
+        .achievement-placeholder {
+          padding-left: 16pt;
+        }
+
+        .achievement-placeholder li + li {
+          margin-top: 6pt;
+        }
+
+        .reference-contact {
+          gap: 2pt;
+        }
+
+        .reference-contact a {
+          font-size: 12pt;
+        }
+
+        .certification {
+          margin-top: 12pt;
+          border-top: 1pt solid #000;
+          padding-top: 8pt;
+        }
+
+        .certification p {
+          margin-bottom: 18pt;
+        }
+
+        .signature-image {
+          width: 140px;
+          height: auto;
         }
       }
     </style>
