@@ -303,16 +303,16 @@
       @media print {
         :root {
           --paper: #fff;
-          --ink: #000;
-          --muted: #000;
-          --accent: #000;
-          --line: #000;
+          --ink: #202722;
+          --muted: #59645d;
+          --accent: #286d4b;
+          --line: #dce4dd;
         }
 
         body {
           padding: 0;
           background: #fff;
-          color: #000;
+          color: var(--ink);
           font-family: Arial, Helvetica, sans-serif;
           font-size: 12pt;
           line-height: 1.15;
@@ -321,7 +321,7 @@
         }
 
         a {
-          color: #000;
+          color: var(--accent);
           text-decoration: none;
         }
 
@@ -336,7 +336,7 @@
         .resume-header {
           grid-template-columns: 1fr 105px;
           gap: 20px;
-          border-bottom: 1.5pt solid #000;
+          border-bottom: 1.5pt solid var(--accent);
           padding-bottom: 8pt;
         }
 
@@ -421,7 +421,7 @@
 
         .certification {
           margin-top: 12pt;
-          border-top: 1pt solid #000;
+          border-top: 1pt solid var(--line);
           padding-top: 8pt;
         }
 
